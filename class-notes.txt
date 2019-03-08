@@ -1,0 +1,54 @@
+
+node_modules Folder -- 
+    Our 3rd party module (lodash) was downloaded using the command: npm instasll lodash --save 
+
+    The reason we use the save flg is so that the package.json file gets updated. 
+    You should never commit the modules folder or share the modules folder when you are 
+    sharing your projects code. 
+
+    Instead, you share your project code, and when someone else downloads it, they navigate
+    to the directory in the terminal, and run: npm install. This command will look at the 
+    dependencies object in the package.json folder and then install the appropriate 
+    3rd parties modules from there. This is why --save is important when installing 3rd 
+    party modules. 
+
+
+nodemon -- 
+    A 3rd party cl utility that monitors node so that when a dev changes the application,
+    node does not need to be restarted in the terminal.
+
+    Installed with: npm install nodemon -g. This is a node package for the developer,
+    not a module that would be used by the application itself. 
+
+array.filter with an arrow function -- 
+    /*Filter is an array method that takes a callback. 
+    This callback function gets called once for every item in the array. 
+    Essentially we are looping over every item in notes. We pass our note variable into the callback 
+    function, and check every existing item to make sure no titles match. We return TRUE if a title matches. 
+    Returning TRUE will put the duplicate item in the duplicateNotes array. The typical outcome would be that 
+    duplicateNotes comes back empty. */
+
+    var duplicateNotes = notes.filter((note) => note.title === title); 
+    CTRL F duplicateNotes to find in project. 
+
+ternary operator -- 
+
+    Used kind of like an excel function. One line of code that uses a question mark to create a variable 
+    that will be x when true and y when false. 
+
+    //Ternary operator example. 
+    //Syntax is: var variable = booleanExpression ? resultWhenTrue : resultWhenFalse
+    var message = noteRemoved ? 'Note successfully deleted.' : 'Note not found.';
+
+debugging -- 
+    The command: node inspect filename.js will let you debug a specific file. 
+    the n command goes to next line. 
+    the c command continues to end. 
+    repl sends you into a mode where you can inspect variables. 
+        you type variable names into this mode. 
+    you can also type: debugger; into a js file and this functions as a line break. 
+    node --inspect-brk filename.js will allow you to debug in chrome. 
+        this starts a server, head to "chrome://inspect" in chrome and press open 
+        dedicated dev tools for node. 
+
+
